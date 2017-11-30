@@ -24,5 +24,15 @@ public class UnionTest {
 		Union.union(null, null);
 	}
 	
+	@Test() 
+	public void RepeatedElement()
+	{
+		b.add(1);
+        Vector vectorSolution = new Vector(5);
+        vectorSolution.addElement(1);
+        vectorSolution.addElement(2);
+        vectorSolution.addElement(3);
+        assertTrue(vectorSolution.equals(Union.union(a, b)));
+	}
+	
 }
-
