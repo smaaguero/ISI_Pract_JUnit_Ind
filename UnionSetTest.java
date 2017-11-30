@@ -26,5 +26,16 @@ public class UnionSetTest{
 		UnionSet.unionSet(null, null);
 	}
 	
+	@Test() 
+	public void RepeatedElement()
+	{
+		b.add(1);
+		Set<Integer>  setSolution = new HashSet<>();
+		setSolution.add(1);
+		setSolution.add(2);
+		setSolution.add(3);
+        assertTrue(setSolution.equals(UnionSet.unionSet(a, b)));
+	}
+	
 }
 
