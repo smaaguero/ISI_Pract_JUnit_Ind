@@ -37,5 +37,17 @@ public class UnionSetTest{
         assertTrue(setSolution.equals(UnionSet.unionSet(a, b)));
 	}
 	
+	@Test() 
+	public void ElementNull()
+	{
+		b.add(null);
+		Set<Integer>  setSolution = new HashSet<>();
+		setSolution.add(1);
+		setSolution.add(2);
+		setSolution.add(3);
+		setSolution.add(null);
+        assertTrue(setSolution.equals(UnionSetGeneric.unionSetGeneric(a, b)));
+	}
+	
 }
 
