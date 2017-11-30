@@ -12,6 +12,21 @@ public class UnionSetGeneric {
 		}
 		
         Set<E> setDevuelto = new HashSet<E>();        
+        
+        for (Iterator<? extends E> i = a.iterator(); i.hasNext(); ) {
+            E f = i.next();
+            if (!setDevuelto.contains(f)) {
+            	setDevuelto.add(f);
+            }
+        }
+
+        for (Iterator<? extends E> i = b.iterator(); i.hasNext(); ) {
+            E f = i.next();
+            if (!setDevuelto.contains(f)) {
+            	setDevuelto.add(f);
+            }
+        }
+        System.err.println(setDevuelto);
         return setDevuelto;
                 
 	}
