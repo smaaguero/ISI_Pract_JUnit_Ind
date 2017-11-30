@@ -35,4 +35,19 @@ public class UnionTest {
         assertTrue(vectorSolution.equals(Union.union(a, b)));
 	}
 	
+	@Test() 
+	public void DifferentClasses()
+	{
+		a.add("string");
+		b.add(("string2"));
+        Vector vectorSolution = new Vector(5);
+        vectorSolution.addElement(1);
+        vectorSolution.addElement(2);
+        vectorSolution.addElement("string");
+        vectorSolution.addElement(3);
+        vectorSolution.addElement("string2");
+        assertTrue(vectorSolution.equals(Union.union(a, b)));
+	}
+	
 }
+
